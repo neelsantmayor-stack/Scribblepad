@@ -31,14 +31,14 @@ jobs:
       if: runner.os != 'Windows'
       run: |
         cd scribblepad_repo
-        pyinstaller --onefile --windowed --name scribblepad scribblepad/main.py
+        pyinstaller --onefile --windowed --name scribblepad scribblepad/gui.py
         cd ..
     
     - name: Build executable (Windows)
       if: runner.os == 'Windows'
       run: |
         cd scribblepad_repo
-        pyinstaller --onefile --windowed --name scribblepad scribblepad/main.py
+        pyinstaller --onefile --windowed --name scribblepad scribblepad/gui.py
         cd ..
     
     - name: Upload artifact (Linux)
